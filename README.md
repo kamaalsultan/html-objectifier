@@ -56,6 +56,4 @@ This package is open-source.
 ## Contact
 
 For inquiries, [Talk to Me!](https://github.com/byteballet/byteballet/issues/new?title=I+want+to+talk+to+you&body=Hi,+@byteballet.).
-```
 
-Please replace `[License Name]`, `[Your Name]`, and `[Your Contact Information]` with the appropriate details for your package.
