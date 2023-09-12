@@ -44,7 +44,7 @@ console.log(JSON.stringify(result));
 For browser usage, include the library via a script tag and use it in your JavaScript code.
 
 ```html
-<script src="./dist/bundled.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/byteballet/html-objectifier@master/dist/bundled.js"></script>
 <script>
   const { parseHTML } = html_objectifier;
   console.log(parseHTML('<!DOCTYPE html><html lang="en"></html>'));
