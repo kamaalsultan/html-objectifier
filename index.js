@@ -1,7 +1,7 @@
 const fs = require("fs");
 const prune = require("json-prune");
 
-exports.parseHTML = function parseHTML(html) {
+module.exports = function parseHTML(html) {
   const htmlObject = {};
 
   const tagRegex = /<(?!!)(?!meta)([^/][^>]+)>/g;
