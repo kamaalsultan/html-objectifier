@@ -1,6 +1,6 @@
 {
   "name": "html-objectifier",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Convert HTML markup into a structured JavaScript object effortlessly with this versatile Node.js package.",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,12 @@
   "dependencies": {
     "jsdom": "^22.1.0",
     "json-prune": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.17",
+    "@babel/node": "^7.22.15",
+    "babel-cli": "^6.26.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   }
 }

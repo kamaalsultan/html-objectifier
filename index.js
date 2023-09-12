@@ -1,7 +1,6 @@
-const fs = require("fs");
 const prune = require("json-prune");
 
-function parseHTML(html) {
+export function parseHTML(html) {
   const htmlObject = {};
 
   const tagRegex = /<(?!!)(?!meta)([^/][^>]+)>/g;
@@ -60,26 +59,31 @@ function parseHTML(html) {
 }
 
 function main() {
-  const fileName = process.argv[2];
-  if (!fileName) {
-    console.error("Please provide an HTML file as an argument.");
-    process.exit(1);
-  }
-
-  fs.readFile(fileName, "utf8", (err, data) => {
-    if (err) {
-      console.error(`Error reading the file: ${err}`);
+  if (typeof window === "undefined") {
+    const fs = require("fs");
+    const fileName = process.argv[2];
+    if (!fileName) {
+      console.error("Please provide an HTML file as an argument.");
       process.exit(1);
     }
 
-    const htmlObject = parseHTML(data);
-    try {
-      console.log(JSON.stringify(htmlObject));
-    } catch (e) {
-      console.log(prune(htmlObject));
-    }
-  });
+    fs.readFile(fileName, "utf8", (err, data) => {
+      if (err) {
+        console.error(`Error reading the file: ${err}`);
+        process.exit(1);
+      }
+
+      const htmlObject = parseHTML(data);
+      try {
+        console.log(JSON.stringify(htmlObject));
+      } catch (e) {
+        console.log(prune(htmlObject));
+      }
+    });
+  }
 }
 
-module.exports = main;
-module.exports.parseHTML = parseHTML;
+if (typeof window === "undefined") {
+  module.exports = main;
+  module.exports.parseHTML = parseHTML;
+}
