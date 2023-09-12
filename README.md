@@ -27,8 +27,8 @@ yarn add html-objectifier
 ```javascript
 //index.js
 
-const htmlToObj = require("html-objectifier");
-htmlToObj();
+const html_objectifier = require("html-objectifier");
+html_objectifier();
 ```
 
 2. You can run it as CLI by running `node index.js markup.html`
@@ -37,11 +37,19 @@ htmlToObj();
 
 ```javascript
 const html = "<div><p>Hello, World!</p></div>";
-const result = htmlToObj.parseHTML(html);
+const result = html_objectifier.parseHTML(html);
 console.log(JSON.stringify(result));
 ```
 
 For browser usage, include the library via a script tag and use it in your JavaScript code.
+
+```html
+<script src="./dist/bundled.js"></script>
+<script>
+  const { parseHTML } = html_objectifier;
+  console.log(parseHTML('<!DOCTYPE html><html lang="en"></html>'));
+</script>
+```
 
 ## Contributions
 
