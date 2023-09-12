@@ -32,6 +32,7 @@ function parseHTML(html) {
                 .split(":")
                 .map((s) => s.trim());
               if (styleProp && styleValue) {
+                if (!element.style) element.style = {};
                 element.style[styleProp] = styleValue;
               }
             });
