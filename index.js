@@ -1,7 +1,7 @@
 const fs = require("fs");
 const prune = require("json-prune");
 const parseHTML = require("./src/parser");
-
+module.exports = parseHTML;
 const fileName = process.argv[2];
 if (!fileName) {
   console.error("Please provide an HTML file as an argument.");
