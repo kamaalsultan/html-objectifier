@@ -1,6 +1,6 @@
 {
   "name": "html-objectifier",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Convert HTML markup into a structured JavaScript object effortlessly with this versatile Node.js package.",
   "main": "index.js",
   "scripts": {

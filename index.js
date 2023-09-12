@@ -21,4 +21,4 @@ fs.readFile(fileName, "utf8", (err, data) => {
   }
 });
 
-module.exports = parseHTML;
+exports.parseHTML = parseHTML;
