@@ -1,0 +1,24 @@
+{
+  "name": "html-objectifier",
+  "version": "1.0.0",
+  "description": "Convert HTML markup into a structured JavaScript object effortlessly with this versatile Node.js package.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "html-objectifier"
+  },
+  "keywords": [
+    "objectify",
+    "html",
+    "json"
+  ],
+  "author": "byteballet",
+  "license": "ISC",
+  "dependencies": {
+    "jsdom": "^22.1.0",
+    "json-prune": "^1.1.0"
+  }
+}
