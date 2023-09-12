@@ -25,19 +25,21 @@ yarn add html-objectifier
 1. Import the library in your Node.js application:
 
 ```javascript
+//index.js
+
 const htmlToObj = require("html-objectifier");
+htmlToObj();
 ```
 
-2. Use the library to convert HTML to an object:
+2. You can run it as CLI by running `node index.js markup.html`
+
+3. Use the library to convert HTML to an object:
 
 ```javascript
 const html = "<div><p>Hello, World!</p></div>";
-const result = htmlToObj.parse(html);
-
-console.log(result);
+const result = htmlToObj.parseHTML(html);
+console.log(JSON.stringify(result));
 ```
-
-Or you can run it as CLI by running `node index.js markup.html`
 
 For browser usage, include the library via a script tag and use it in your JavaScript code.
 
