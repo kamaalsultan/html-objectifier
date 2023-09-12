@@ -1,7 +1,7 @@
 const fs = require("fs");
 const prune = require("json-prune");
 
-module.exports = function parseHTML(html) {
+function parseHTML(html) {
   const htmlObject = {};
 
   const tagRegex = /<(?!!)(?!meta)([^/][^>]+)>/g;
@@ -57,7 +57,7 @@ module.exports = function parseHTML(html) {
   }
 
   return htmlObject.children[0];
-};
+}
 
 const fileName = process.argv[2];
 if (!fileName) {
@@ -78,3 +78,5 @@ fs.readFile(fileName, "utf8", (err, data) => {
     console.log(prune(htmlObject));
   }
 });
+
+module.exports = parseHTML;
